@@ -8,11 +8,11 @@
 
         <nav id="navbar">
                 <ul>
-                        <li><a href="./home">Home</a></li>
-                        <li><a href="./list">List of games</a></li>
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/list">List of games</a></li>
                         <?php if (isset($_SESSION['usertype']) == 'admin'): ?>
-                                <li><a href="./insert">Create a new game</a></li>
-                                <li><a href="./manage_users">Manage Users</a></li>
+                                <li><a href="/insert">Create a new game</a></li>
+                                <li><a href="/manage_users">Manage Users</a></li>
                         <?php endif; ?>
                 </ul>
         </nav>
@@ -38,10 +38,10 @@
                 <div id="login-logout">
                         <ul>
                                 <?php if (isset($_SESSION["user_id"])): ?>
-                                        <li><a href="./logout">logout</a></li>
+                                        <li><a href="/logout">logout</a></li>
                                 <?php else:?>
-                                        <li><a href="./login">Login</a></li>
-                                        <li><a href="./register">Register</a></li>
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/register">Register</a></li>
                                 <?php endif; ?>
                         </ul>
                 </div>
