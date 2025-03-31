@@ -38,7 +38,7 @@ if (isset($_GET['page_id']) && isset($_GET['slug'])) {
     <p>Size: <?= $page['target_size'] . "px" ?></p>
     <a id="gameLink" href="./game/<?php echo $_GET["page_id"] ?>">Go to game</a>
     <?php if($grabData['usertype'] == 'admin'):?>
-        <a href="./delete/<?= $page_id ?>" onclick="return confirm('Are you sure you want to delete this page?')">Delete</a>
+        <a href="/delete/<?= $page_id ?>" onclick="return confirm('Are you sure you want to delete this page?')">Delete</a>
     <?php endif;?>
     <?= include ('./private/view_comments.php');?>
 <?php else: ?>

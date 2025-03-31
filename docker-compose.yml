@@ -1,0 +1,8 @@
+services:
+  phpdocker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: phpdocker
+    ports:
+      - "4321:80"

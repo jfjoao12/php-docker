@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET['user_id'])) {
 ?>
 <?php if ($delete_statement): ?>
     <p class="success-message">User deleted successfully.</p>
-    <a href="./manage_users">Go back</a>
+    <a href="/manage_users">Go back</a>
 <?php else: ?>
     <p class="error">Error deleting user.</p>
 <?php endif; ?>
