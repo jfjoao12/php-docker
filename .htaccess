@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Prevent css and js to be redirected
+
+
+RewriteRule ^view/(.*)/(.*)$ index.php?p=view&page_id=$1&slug=$2
+RewriteRule ^edit/(.*)$ index.php?p=edit&page_id=$1
+RewriteRule ^edit_users/(.*)$ index.php?p=edit_users&user_id=$1
+RewriteRule ^list/search=(.*)$ index.php?p=list&search=$1
+RewriteRule ^delete_user/(.*)$ index.php?p=delete_user&user_id=$1
+RewriteRule ^home/logged_in=true$ index.php?=home&logged_in=true
+RewriteRule ^game/(.*)$ index.php?p=game&page_id=$1
+RewriteRule ^delete/(.*)$ index.php?p=delete&page_id=$1
+
+RewriteCond %{QUERY_STRING} ^search=(.*)
+RewriteRule ^search$ index.php?p=list&search=%1
+
+RewriteRule ^(home|list|insert|manage_users|login|register|logout|user_profile)$ index.php?p=$1 [L,QSA]
